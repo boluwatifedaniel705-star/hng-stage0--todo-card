@@ -1,0 +1,87 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+/* CARD */
+[data-testid="test-todo-card"] {
+  background: white;
+  width: 100%;
+  max-width: 480px;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* TOP ROW (checkbox + title) */
+label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* TITLE */
+[data-testid="test-todo-title"] {
+  font-size: 20px;
+  margin: 0;
+}
+
+/* DESCRIPTION */
+[data-testid="test-todo-description"] {
+  margin: 0;
+  color: #555;
+}
+
+/* META ROW (priority + status horizontal) */
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+/* PRIORITY */
+[data-testid="test-todo-priority"] {
+  background: #ffcc00;
+  padding: 4px 10px;
+  border-radius: 8px;
+  width: fit-content;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* STATUS */
+[data-testid="test-todo-status"] {
+  font-weight: bold;
+  color: #333;
+}
+
+/* DUE DATE */
+time {
+  color: #333;
+  font-size: 14px;
+}
+
+/* TIME REMAINING */
+[data-testid="test-todo-time-remaining"] {
+  color: #666;
+  font-size: 13px;
+}
+
+/* CHECKBOX */
+input[type="checkbox"] {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* FOCUS ACCESSIBILITY (HNG requirement) */
+input:focus,
+button:focus {
+  outline: 3px solid #4a90e2;
+}
